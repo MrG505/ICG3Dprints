@@ -8,15 +8,30 @@
     <style>
         :root { --ford-blue: #003478; }
         .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 52 120 / 0.4); }
+        .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 52 120 / 0.5); }
     </style>
 </head>
-<body class="bg-[#0a0a0a] text-gray-200 tail-container">
-    <!-- Same NAV as index.html - copy the <nav> section from above -->
+<body class="bg-[#0a0a0a] text-gray-200">
+    <!-- NAV -->
+    <nav class="bg-black border-b border-[#003478] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo3dprints.PNG" alt="ICG3Dprints" class="h-11 w-auto">
+                <span class="text-3xl font-bold tracking-tight text-[#003478]">ICG3Dprints</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-lg font-medium">
+                <a href="index.html" class="hover:text-[#003478] transition-colors">Home</a>
+                <a href="shop.html" class="hover:text-[#003478] transition-colors">Shop</a>
+                <a href="about.html" class="hover:text-[#003478] transition-colors">About</a>
+                <a href="contact.html" class="hover:text-[#003478] transition-colors">Custom Orders</a>
+            </div>
+            <a href="contact.html" class="bg-[#003478] hover:bg-blue-800 px-6 py-3 rounded-xl font-semibold transition">Get Custom Quote</a>
+        </div>
+    </nav>
 
     <div class="max-w-7xl mx-auto px-6 py-16">
         <h1 class="text-5xl font-bold text-center mb-4 text-[#003478]">Shop Our Collection</h1>
-        <p class="text-center text-xl text-gray-400 mb-12">Physical prints &amp; instant digital STL files • High quality Bambu Lab P1P</p>
+        <p class="text-center text-xl text-gray-400 mb-12">Physical prints &amp; instant digital STL files • Powered by Bambu Lab P1P</p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Lion Head Plant Vase -->
@@ -25,8 +40,8 @@
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Lion Head Plant Vase</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$35</p>
-                    <p class="text-gray-400 mb-6">Detailed decorative planter. Perfect for succulents and home decor.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/35','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now</button>
+                    <p class="text-gray-400 mb-6">Stunning detailed decorative planter. Perfect for succulents and home decor.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/35','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $35</button>
                 </div>
             </div>
 
@@ -34,10 +49,10 @@
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
                 <img src="assets/ecoboost-mustang.jpg" alt="2017 Ecoboost Mustang" class="w-full h-80 object-cover">
                 <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">2017 EcoBoost Mustang</h2>
+                    <h2 class="text-2xl font-semibold mb-2">2017 EcoBoost Mustang Model</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
-                    <p class="text-gray-400 mb-6">Highly detailed scale model for collectors and display.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now</button>
+                    <p class="text-gray-400 mb-6">Highly detailed scale car model for collectors and display.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
                 </div>
             </div>
 
@@ -47,8 +62,8 @@
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">2020 Shelby GT500 Mustang</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
-                    <p class="text-gray-400 mb-6">Iconic Shelby model with crisp, accurate details.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now</button>
+                    <p class="text-gray-400 mb-6">Iconic Shelby model with crisp accurate details.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
                 </div>
             </div>
 
@@ -57,9 +72,9 @@
                 <img src="assets/dragon-skull.jpg" alt="Dragon Skull Cat Bed" class="w-full h-80 object-cover">
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Custom Dragon Skull Cat Bed</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">$25 <span class="text-sm font-normal">(Digital STL File)</span></p>
-                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats. Print at home or local service. Custom sizing available.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Digital File</button>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$25 <span class="text-sm font-normal text-gray-400">(Digital STL File)</span></p>
+                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats. Print yourself or at a local service. Custom sizing available.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Digital File - $25</button>
                 </div>
             </div>
 
@@ -69,8 +84,8 @@
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Fondor Haulcraft (Star Wars)</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$40</p>
-                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model for fans and collectors.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/40','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now</button>
+                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model. Perfect for fans and collectors.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/40','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $40</button>
                 </div>
             </div>
 
@@ -78,10 +93,10 @@
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
                 <img src="assets/custom-sign.jpg" alt="Custom Signs" class="w-full h-80 object-cover">
                 <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">Custom 3D Signs &amp; Potty Shut</h2>
+                    <h2 class="text-2xl font-semibold mb-2">Custom Signs &amp; Potty Shut</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">From $18</p>
-                    <p class="text-gray-400 mb-6">Personalized signs, funny bathroom signs, logos &amp; more. Message for custom.</p>
-                    <button onclick="window.open('https://paypal.me/YOURPAYPAL/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Order Custom</button>
+                    <p class="text-gray-400 mb-6">Personalized signs, funny bathroom signs, logos &amp; more. Message for quote.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Order Custom</button>
                 </div>
             </div>
         </div>
