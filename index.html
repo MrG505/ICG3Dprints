@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICG3Dprints - Premium 3D Prints</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #0a0a0a; color: #eee; }
+        header { background: linear-gradient(to bottom, #1a1a1a, #000); padding: 4rem 2rem; text-align: center; }
+        .logo { max-width: 300px; height: auto; margin-bottom: 1rem; }
+        .hero { font-size: 3rem; margin: 0 0 1rem; color: #0f0; }
+        .tagline { font-size: 1.4rem; color: #aaa; }
+        .about { max-width: 900px; margin: 3rem auto; padding: 2rem; background: #1a1a1a; border-radius: 16px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 3rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .product { background: #1a1a1a; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: transform 0.3s; }
+        .product:hover { transform: translateY(-8px); }
+        model-viewer { width: 100%; height: 320px; background-color: #222; }
+        .info { padding: 1.5rem; text-align: center; }
+        .price { font-size: 1.5rem; color: #0f0; margin: 0.5rem 0; }
+        .buy-btn { background: #0a0; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; width: 100%; }
+        footer { text-align: center; padding: 3rem; background: #000; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo3dprints.PNG" alt="ICG3Dprints Logo" class="logo">
+        <h1 class="hero">ICG3Dprints</h1>
+        <p class="tagline">Premium 3D Prints • Powered by Bambu Lab P1P</p>
+    </header>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>ICG3Dprints delivers premium, high-detail 3D printed creations using a Bambu Lab P1P for exceptional speed, precision, and reliability. From functional gadgets, custom prototypes, and cosplay armor to artistic sculptures and personalized home decor, we print with top-tier PLA, PETG, and other filaments. Fast turnaround, made-to-order flexibility, and careful packaging ensure every piece arrives ready to impress. Hobbyists, makers, and businesses trust us to turn ideas into high-quality physical objects. Explore the gallery and order your custom print today.</p>
+    </section>
+
+    <section class="gallery">
+        <!-- Add your first product here later. For now it's a placeholder -->
+        <div class="product">
+            <model-viewer src="assets/sample.glb" alt="Sample Print" auto-rotate camera-controls></model-viewer>
+            <div class="info">
+                <h2>Your First Product</h2>
+                <p class="price">$25</p>
+                <p>High quality Bambu Lab P1P print</p>
+                <button class="buy-btn" onclick="window.open('https://paypal.me/YOURPAYPALUSERNAME/25', '_blank')">Buy Now via PayPal</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© ICG3Dprints • Printed on Bambu Lab P1P • Contact: your@email.com</p>
+    </footer>
+</body>
+</html>
