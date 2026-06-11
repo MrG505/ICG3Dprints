@@ -3,81 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICG3Dprints - Premium 3D Prints</title>
+    <title>ICG3Dprints - Premium 3D Prints & Designs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
-        :root {
-            --shadow-black: #0a0a0a;
-            --ford-blue: #003478;
-        }
-        body { 
-            font-family: system-ui, -apple-system, sans-serif; 
-            margin: 0; 
-            background: var(--shadow-black); 
-            color: #eee; 
-        }
-        header { 
-            background: linear-gradient(to bottom, #1a1a1a, var(--shadow-black)); 
-            padding: 4rem 2rem; 
-            text-align: center; 
-        }
-        .logo { max-width: 320px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 12px var(--ford-blue)); }
-        .hero { font-size: 3rem; margin: 0 0 0.5rem; color: var(--ford-blue); }
-        .tagline { font-size: 1.35rem; color: #ccc; }
-        .about { max-width: 900px; margin: 3rem auto; padding: 2rem; background: #1a1a1a; border-radius: 16px; border: 1px solid var(--ford-blue); }
-        .gallery { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 2rem; 
-            padding: 3rem 2rem; 
-            max-width: 1400px; 
-            margin: 0 auto; 
-        }
-        .product { 
-            background: #1a1a1a; 
-            border: 1px solid var(--ford-blue); 
-            border-radius: 16px; 
-            overflow: hidden; 
-            transition: all 0.3s; 
-        }
-        .product:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,52,120,0.4); }
-        .product img { width: 100%; height: 320px; object-fit: cover; background: #111; }
-        .info { padding: 1.5rem; text-align: center; }
-        .price { font-size: 1.5rem; color: var(--ford-blue); font-weight: bold; }
-        .buy-btn { 
-            background: var(--ford-blue); 
-            color: white; 
-            padding: 1rem 2rem; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-size: 1.1rem; 
-            width: 100%; 
-            margin-top: 0.5rem; 
-        }
-        footer { text-align: center; padding: 3rem; background: var(--shadow-black); border-top: 2px solid var(--ford-blue); }
+        :root { --ford-blue: #003478; }
+        body { font-family: system-ui, sans-serif; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('logo3dprints.PNG') center/cover; }
     </style>
 </head>
-<body>
-    <header>
-        <img src="logo3dprints.PNG" alt="ICG3Dprints Logo" class="logo">
-        <h1 class="hero">ICG3Dprints</h1>
-        <p class="tagline">Premium 3D Prints & Digital Designs • Powered by Bambu Lab P1P</p>
+<body class="bg-[#0a0a0a] text-gray-200">
+    <!-- Nav -->
+    <nav class="bg-black border-b border-[#003478] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo3dprints.PNG" alt="Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold text-[#003478]">ICG3Dprints</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="index.html" class="hover:text-[#003478] transition">Home</a>
+                <a href="shop.html" class="hover:text-[#003478] transition">Shop</a>
+                <a href="about.html" class="hover:text-[#003478] transition">About</a>
+                <a href="contact.html" class="hover:text-[#003478] transition">Custom Orders</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-screen flex items-center justify-center text-center">
+        <div>
+            <h1 class="text-6xl md:text-7xl font-bold text-white mb-4">Premium 3D Prints &amp; Digital Files</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Bambu Lab P1P powered • High detail • Mustang, Star Wars, Fantasy &amp; Custom</p>
+            <a href="shop.html" class="mt-8 inline-block bg-[#003478] hover:bg-blue-800 px-10 py-4 rounded-xl text-xl font-semibold transition">Browse Shop</a>
+        </div>
     </header>
-
-    <section class="about">
-        <h2>About Us</h2>
-        <p>ICG3Dprints delivers premium, high-detail 3D printed creations using a Bambu Lab P1P...</p>
-    </section>
-
-    <section class="gallery">
-        <!-- Your products here (same as before) -->
-        <!-- Lion Head Plant Vase, Mustangs, Dragon Skull Cat Bed (Digital), etc. -->
-        <!-- Keep the product blocks from my previous message or add them back -->
-    </section>
-
-    <footer>
-        <p>© ICG3Dprints • Printed on Bambu Lab P1P • Custom orders welcome</p>
-    </footer>
 </body>
 </html>
