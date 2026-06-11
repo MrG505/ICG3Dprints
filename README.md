@@ -1,1 +1,2 @@
 # ICG3Dprints
+ICG3Dprints delivers premium, high-detail 3D printed creations using a Bambu Lab P1P for exceptional speed, precision, and reliability. From functional gadgets, custom prototypes, and cosplay armor to artistic sculptures and personalized home decor, we print with top-tier PLA, PETG, and other filaments. Fast turnaround, made-to-order flexibility, and careful packaging ensure every piece arrives ready to impress. Hobbyists, makers, and businesses trust us to turn ideas into high-quality physical objects. Explore the gallery and order your custom print today.
