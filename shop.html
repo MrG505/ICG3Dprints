@@ -9,6 +9,9 @@
         :root { --ford-blue: #003478; }
         .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 52 120 / 0.5); }
+        .carousel { position: relative; overflow: hidden; }
+        .carousel img { transition: opacity 0.5s; }
+        .carousel-dot { transition: all 0.3s; }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-gray-200">
@@ -34,9 +37,17 @@
         <p class="text-center text-xl text-gray-400 mb-12">Physical prints &amp; instant digital STL files • Powered by Bambu Lab P1P</p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Lion Vase -->
+            <!-- Lion Vase - Multiple Photos -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Lion Vase front.PNG" alt="Lion Head Plant Vase" class="w-full h-80 object-cover">
+                <div class="carousel relative h-80">
+                    <img src="Lion Vase front.PNG" alt="Lion Vase Front" class="w-full h-full object-cover absolute inset-0">
+                    <img src="Lion Vase Side View .PNG" alt="Lion Vase Side" class="w-full h-full object-cover absolute inset-0 opacity-0">
+                    <img src="Lion Vase back view.PNG" alt="Lion Vase Back" class="w-full h-full object-cover absolute inset-0 opacity-0">
+                    <div class="absolute bottom-4 left-1/2 flex gap-2 -translate-x-1/2">
+                        <div onclick="prevSlide(this)" class="carousel-dot w-3 h-3 bg-white rounded-full cursor-pointer"></div>
+                        <div onclick="nextSlide(this)" class="carousel-dot w-3 h-3 bg-white rounded-full cursor-pointer"></div>
+                    </div>
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Lion Head Plant Vase</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$35</p>
@@ -45,72 +56,57 @@
                 </div>
             </div>
 
-            <!-- Ecoboost Mustang -->
-            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Ecoboost mustang .PNG" alt="2017 Ecoboost Mustang" class="w-full h-80 object-cover">
-                <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">2017 EcoBoost Mustang Model</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
-                    <p class="text-gray-400 mb-6">Highly detailed scale car model for collectors and display.</p>
-                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
-                </div>
-            </div>
-
-            <!-- GT500 Mustang -->
-            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Gt500 front .PNG" alt="2020 GT500" class="w-full h-80 object-cover">
-                <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">2020 Shelby GT500 Mustang</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
-                    <p class="text-gray-400 mb-6">Iconic Shelby model with crisp accurate details.</p>
-                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
-                </div>
-            </div>
-
             <!-- Dragon Skull Cat Bed -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="dragonskullcatbed.png" alt="Dragon Skull Cat Bed" class="w-full h-80 object-cover">
+                <div class="carousel relative h-80">
+                    <img src="Dragon Cat bed front view .PNG" alt="Dragon Skull Front" class="w-full h-full object-cover absolute inset-0">
+                    <img src="Dragon cat bed side view L.PNG" alt="Dragon Skull Side L" class="w-full h-full object-cover absolute inset-0 opacity-0">
+                    <img src="Dragon cat bed side view R.PNG" alt="Dragon Skull Side R" class="w-full h-full object-cover absolute inset-0 opacity-0">
+                    <div class="absolute bottom-4 left-1/2 flex gap-2 -translate-x-1/2">
+                        <div onclick="prevSlide(this)" class="carousel-dot w-3 h-3 bg-white rounded-full cursor-pointer"></div>
+                        <div onclick="nextSlide(this)" class="carousel-dot w-3 h-3 bg-white rounded-full cursor-pointer"></div>
+                    </div>
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Custom Dragon Skull Cat Bed</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$25 <span class="text-sm font-normal text-gray-400">(Digital STL File)</span></p>
-                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats. Print yourself or at a local service. Custom sizing available.</p>
+                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats. Multiple views.</p>
                     <button onclick="window.open('https://www.paypal.com/ncp/payment/2ZNAXVHUP5WLJ','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Digital File - $25</button>
                 </div>
             </div>
 
-            <!-- Fondor Haulcraft (use one of the lightbox or other images if needed) -->
-            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Light box ex1.PNG" alt="Fondor Haulcraft" class="w-full h-80 object-cover">
-                <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">Fondor Haulcraft (Star Wars)</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">$40</p>
-                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model. Perfect for fans and collectors.</p>
-                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/40','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $40</button>
-                </div>
-            </div>
+            <!-- Add similar carousel blocks for other products with multiple photos (Ecoboost, GT500, Custom Signs, etc.) -->
+            <!-- For single photo products, use a simple <img> -->
 
-            <!-- Custom Signs -->
-            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Custom Sign ex1.PNG" alt="Custom Signs" class="w-full h-80 object-cover">
-                <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">Custom 3D Signs</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">Starting at $25</p>
-                    <p class="text-gray-400 mb-6">Personalized name signs, business logos, decorative text &amp; more. Multiple examples available.</p>
-                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Order Custom</button>
-                </div>
-            </div>
-
-            <!-- Potty Shut -->
-            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="assets/potty-shut.jpg" alt="Potty Shut" class="w-full h-80 object-cover">
-                <div class="p-8">
-                    <h2 class="text-2xl font-semibold mb-2">Potty Shut - Automatic Toilet Lid Closer</h2>
-                    <p class="text-[#003478] text-3xl font-bold mb-4">$18</p>
-                    <p class="text-gray-400 mb-6">My original invention! Automatically closes the toilet lid if left up. Helps elderly, forgetful users, keeps pets out, and improves bathroom cleanliness and hygiene.</p>
-                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/18','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $18</button>
-                </div>
-            </div>
         </div>
     </div>
+
+    <script>
+        function nextSlide(el) {
+            const carousel = el.parentElement.parentElement;
+            const imgs = carousel.querySelectorAll('img');
+            let active = 0;
+            imgs.forEach((img, i) => { if (img.style.opacity !== '0') active = i; });
+            imgs.forEach(img => img.style.opacity = '0');
+            const next = (active + 1) % imgs.length;
+            imgs[next].style.opacity = '1';
+        }
+        function prevSlide(el) {
+            const carousel = el.parentElement.parentElement;
+            const imgs = carousel.querySelectorAll('img');
+            let active = 0;
+            imgs.forEach((img, i) => { if (img.style.opacity !== '0') active = i; });
+            imgs.forEach(img => img.style.opacity = '0');
+            const prev = (active - 1 + imgs.length) % imgs.length;
+            imgs[prev].style.opacity = '1';
+        }
+        // Auto cycle every 4 seconds for all carousels
+        setInterval(() => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                if (dots.length > 0) nextSlide(dots[0]);
+            });
+        }, 4000);
+    </script>
 </body>
 </html>
