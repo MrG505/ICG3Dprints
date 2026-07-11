@@ -1,4 +1,146 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICG3Dprints - Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --ford-blue: #003478; }
+        .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 52 120 / 0.5); }
+        .carousel { position: relative; height: 320px; overflow: hidden; }
+        .carousel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.6s ease-in-out; }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-gray-200">
+    <!-- NAV -->
+    <nav class="bg-black border-b border-[#003478] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo3dprints.PNG" alt="ICG3Dprints" class="h-11 w-auto">
+                <span class="text-3xl font-bold tracking-tight text-[#003478]">ICG3Dprints</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-lg font-medium">
+                <a href="index.html" class="hover:text-[#003478] transition-colors">Home</a>
+                <a href="shop.html" class="hover:text-[#003478] transition-colors">Shop</a>
+                <a href="about.html" class="hover:text-[#003478] transition-colors">About</a>
+                <a href="contact.html" class="hover:text-[#003478] transition-colors">Custom Orders</a>
+            </div>
+            <a href="contact.html" class="bg-[#003478] hover:bg-blue-800 px-6 py-3 rounded-xl font-semibold transition">Get Custom Quote</a>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <h1 class="text-5xl font-bold text-center mb-4 text-[#003478]">Shop Our Collection</h1>
+        <p class="text-center text-xl text-gray-400 mb-12">Physical prints &amp; instant digital STL files • Powered by Bambu Lab P1P</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Lion Vase -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <div class="carousel">
+                    <img src="Lion Vase front.PNG" alt="Lion Vase" class="opacity-100">
+                    <img src="Lion Vase Side View .PNG" alt="Lion Vase Side" class="opacity-0">
+                    <img src="Lion Vase back view.PNG" alt="Lion Vase Back" class="opacity-0">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">Lion Head Plant Vase</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$35</p>
+                    <p class="text-gray-400 mb-6">Stunning detailed decorative planter.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/35','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $35</button>
+                </div>
+            </div>
+
+            <!-- Ecoboost Mustang -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <img src="Ecoboost mustang .PNG" alt="2017 Ecoboost Mustang" class="w-full h-80 object-cover">
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">2017 EcoBoost Mustang Model</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
+                    <p class="text-gray-400 mb-6">Highly detailed scale car model.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
+                </div>
+            </div>
+
+            <!-- GT500 Mustang -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <img src="Gt500 front .PNG" alt="2020 GT500" class="w-full h-80 object-cover">
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">2020 Shelby GT500 Mustang</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
+                    <p class="text-gray-400 mb-6">Iconic Shelby model with crisp accurate details.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
+                </div>
+            </div>
+
+            <!-- Dragon Skull Cat Bed -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <div class="carousel">
+                    <img src="Dragon Cat bed front view .PNG" alt="Dragon Skull Front" class="opacity-100">
+                    <img src="Dragon cat bed side view L.PNG" alt="Dragon Skull Side L" class="opacity-0">
+                    <img src="Dragon cat bed side view R.PNG" alt="Dragon Skull Side R" class="opacity-0">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">Custom Dragon Skull Cat Bed</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$25 <span class="text-sm font-normal text-gray-400">(Digital STL File)</span></p>
+                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats.</p>
+                    <button onclick="window.open('https://www.paypal.com/ncp/payment/2ZNAXVHUP5WLJ','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Digital File - $25</button>
+                </div>
+            </div>
+
+            <!-- Fondor Haulcraft -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <img src="assets/fondor-haulcraft.jpg" alt="Fondor Haulcraft" class="w-full h-80 object-cover"> <!-- Update this src when you upload the correct Fondor image -->
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">Fondor Haulcraft (Star Wars)</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$40</p>
+                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model. Perfect for fans and collectors.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/40','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $40</button>
+                </div>
+            </div>
+
+            <!-- Custom Signs Carousel -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <div class="carousel">
+                    <img src="Custom Sign ex1.PNG" alt="Custom Sign 1" class="opacity-100">
+                    <img src="Custom sign ex2.PNG" alt="Custom Sign 2" class="opacity-0">
+                    <img src="Custom sign ex3.PNG" alt="Custom Sign 3" class="opacity-0">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">Custom 3D Signs</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">Starting at $25</p>
+                    <p class="text-gray-400 mb-6">Personalized name signs, business logos, decorative text &amp; more.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Order Custom</button>
+                </div>
+            </div>
+
+            <!-- Potty Shut -->
+            <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
+                <img src="assets/potty-shut.jpg" alt="Potty Shut" class="w-full h-80 object-cover">
+                <div class="p-8">
+                    <h2 class="text-2xl font-semibold mb-2">Potty Shut - Automatic Toilet Lid Closer</h2>
+                    <p class="text-[#003478] text-3xl font-bold mb-4">$18</p>
+                    <p class="text-gray-400 mb-6">My original invention! Automatically closes the toilet lid if left up. Helps elderly, forgetful users, keeps pets out, and improves bathroom cleanliness.</p>
+                    <button onclick="window.open('https://www.paypal.biz/icg3dprints/18','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $18</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-cycling carousels
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            let current = 0;
+            const images = carousel.querySelectorAll('img');
+            setInterval(() => {
+                images[current].classList.add('opacity-0');
+                current = (current + 1) % images.length;
+                images[current].classList.remove('opacity-0');
+            }, 3500);
+        });
+    </script>
+</body>
+</html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
