@@ -9,6 +9,8 @@
         :root { --ford-blue: #003478; }
         .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 52 120 / 0.5); }
+        .carousel { position: relative; height: 320px; overflow: hidden; }
+        .carousel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.6s ease-in-out; }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-gray-200">
@@ -34,9 +36,13 @@
         <p class="text-center text-xl text-gray-400 mb-12">Physical prints &amp; instant digital STL files • Powered by Bambu Lab P1P</p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Lion Head Plant Vase -->
+            <!-- Lion Vase Carousel -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Lion Vase front.PNG" alt="Lion Head Plant Vase" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Lion Vase front.PNG" alt="Lion Vase" class="opacity-100">
+                    <img src="Lion Vase Side View .PNG" alt="Lion Vase Side" class="opacity-0">
+                    <img src="Lion Vase back view.PNG" alt="Lion Vase Back" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Lion Head Plant Vase</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$35</p>
@@ -45,9 +51,12 @@
                 </div>
             </div>
 
-            <!-- 2017 Ecoboost Mustang -->
+            <!-- Ecoboost Mustang Carousel -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Ecoboost mustang .PNG" alt="2017 Ecoboost Mustang" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Ecoboost mustang .PNG" alt="Ecoboost" class="opacity-100">
+                    <img src="Ecoboost Mustang front .PNG" alt="Ecoboost Front" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">2017 EcoBoost Mustang Model</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
@@ -56,46 +65,62 @@
                 </div>
             </div>
 
-            <!-- 2020 GT500 Mustang -->
+            <!-- GT500 Mustang Carousel -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Gt500 front .PNG" alt="2020 GT500" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Gt500 front .PNG" alt="GT500" class="opacity-100">
+                    <img src="Gt500 Side.PNG" alt="GT500 Side" class="opacity-0">
+                    <img src="Gt500 left.PNG" alt="GT500 Left" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">2020 Shelby GT500 Mustang</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$45</p>
-                    <p class="text-gray-400 mb-6">Iconic Shelby model with crisp details.</p>
+                    <p class="text-gray-400 mb-6">Iconic Shelby model.</p>
                     <button onclick="window.open('https://www.paypal.biz/icg3dprints/45','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $45</button>
                 </div>
             </div>
 
-            <!-- Dragon Skull Cat Bed -->
+            <!-- Dragon Skull Carousel -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="dragonskullcatbed.png" alt="Dragon Skull Cat Bed" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Dragon Cat bed front view .PNG" alt="Dragon Skull" class="opacity-100">
+                    <img src="Dragon cat bed side view L.PNG" alt="Side L" class="opacity-0">
+                    <img src="Dragon cat bed side view R.PNG" alt="Side R" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Custom Dragon Skull Cat Bed</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$25 <span class="text-sm font-normal text-gray-400">(Digital STL File)</span></p>
-                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats. Print yourself or at a local service.</p>
+                    <p class="text-gray-400 mb-6">Epic fantasy dragon skull bed for cats.</p>
                     <button onclick="window.open('https://www.paypal.com/ncp/payment/2ZNAXVHUP5WLJ','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Digital File - $25</button>
                 </div>
             </div>
 
             <!-- Fondor Haulcraft -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Light box ex1.PNG" alt="Fondor Haulcraft" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Light box ex1.PNG" alt="Fondor Haulcraft" class="opacity-100">
+                    <img src="Light box ex2.PNG" alt="Light Box 2" class="opacity-0">
+                    <img src="Lightbox ex3.PNG" alt="Light Box 3" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Fondor Haulcraft (Star Wars)</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">$40</p>
-                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model. Perfect for fans and collectors.</p>
+                    <p class="text-gray-400 mb-6">Detailed Star Wars ship model.</p>
                     <button onclick="window.open('https://www.paypal.biz/icg3dprints/40','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Buy Now - $40</button>
                 </div>
             </div>
 
-            <!-- Custom Signs -->
+            <!-- Custom Signs Carousel -->
             <div class="product-card bg-[#1a1a1a] border border-[#003478]/30 rounded-3xl overflow-hidden">
-                <img src="Custom Sign ex1.PNG" alt="Custom Signs" class="w-full h-80 object-cover">
+                <div class="carousel">
+                    <img src="Custom Sign ex1.PNG" alt="Custom Sign 1" class="opacity-100">
+                    <img src="Custom sign ex2.PNG" alt="Custom Sign 2" class="opacity-0">
+                    <img src="Custom sign ex3.PNG" alt="Custom Sign 3" class="opacity-0">
+                </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-semibold mb-2">Custom 3D Signs</h2>
                     <p class="text-[#003478] text-3xl font-bold mb-4">Starting at $25</p>
-                    <p class="text-gray-400 mb-6">Personalized name signs, business logos, decorative text &amp; more.</p>
+                    <p class="text-gray-400 mb-6">Personalized name signs, logos &amp; more.</p>
                     <button onclick="window.open('https://www.paypal.biz/icg3dprints/25','_blank')" class="w-full bg-[#003478] hover:bg-blue-800 py-4 rounded-2xl font-bold text-lg">Order Custom</button>
                 </div>
             </div>
@@ -112,5 +137,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Auto-cycling carousels
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            let current = 0;
+            const images = carousel.querySelectorAll('img');
+            setInterval(() => {
+                images[current].classList.add('opacity-0');
+                current = (current + 1) % images.length;
+                images[current].classList.remove('opacity-0');
+            }, 3500);
+        });
+    </script>
 </body>
 </html>
